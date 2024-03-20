@@ -1,0 +1,62 @@
+<yml_catalog date="2024-20-03 19:29">
+<shop>
+<name>Клиника Доктор Фрейд.Врачи</name>
+<company>ООО Доктор Фрейд.Врачи</company>
+<url>https://doctorfreud.ru</url>
+<description>Каталог врачей</description>
+<currencies>
+<currency id="RUR" rate="1"/>
+</currencies>
+<categories>
+<category id="1">Врач</category>
+</categories>
+<sets>
+<set id="psikhiatr">
+<name>Психиатр</name>
+</set>
+<set id="psikholog">
+<name>Психолог</name>
+</set>
+</sets>
+<offers>
+<!-- 
+                Оффер для врача - это связка "Врач"-"Клиника"-"Тип приема".
+                При наличии у врача нескольких офферов нужно предоставить каждый из них отдельно.
+                В таком случае URL разных офферов одного врача должны различаться незначащим cgi-параметром ?offer-id=...
+
+             -->
+<!-- group_id - уникальный идентификтаор врача. нужен при наличии разных URL у одного человека. Целое число, не более 9 знаков -->
+<offer id="vrach1" group_id="1">
+<name>Расторгуева Надежда Игоревна</name>
+<!-- ФИО, именно в таком порядке -->
+<!-- URL может совпадать ТОЛЬКО для офферов с одинаковым group_id. -->
+<url>https://doctorfreud.ru/rastorgyeva</url>
+<!-- URL карточки врача.  -->
+<price from="true">4000</price>
+<!-- Цена приема при записи в источнике фида, с учетом скидки  -->
+<oldprice>4000</oldprice>
+<!-- Цена приема в клинике, должна быть не ниже price -->
+<currencyId>RUR</currencyId>
+<sales_notes>Первичный прием</sales_notes>
+<set-ids>psikhiatr, psikhoterapevt</set-ids>
+<!-- специальности через запятую -->
+<picture>https://static.tildacdn.com/tild6333-6666-4266-b335-363164616566/rastorgueva-nadezhda.jpg</picture>
+<description>Эксперт в области когнитивных расстройств.Стаж работы — 24 года.</description>
+<categoryId>1</categoryId>
+<param name="Фамилия">Засторгуева</param>
+<param name="Имя">Надежда</param>
+<param name="Отчество">Игоревна</param>
+<param name="Годы опыта">24</param>
+<param name="Город">г. Нижний Новгород</param>
+<param name="Взрослый врач">true</param>
+<!-- Принимает взрослых, от 18 лет -->
+<param name="Ссылка на профиль врача">https://doctorfreud.ru/rastorgyeva</param>
+<param name="Город клиники">г. Нижний Новгород</param>
+<param name="Адрес клиники">ул. Ульянова, д. 44</param>
+<param name="Название клиники">Клиника Доктор Фрейд</param>
+<param name="Онлайн-расписание">true</param>
+<param name="Телефон для записи">+7(831)267-20-50</param>
+</offer>
+</offers>
+</shop>
+</yml_catalog>
